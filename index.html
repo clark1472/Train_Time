@@ -25,6 +25,8 @@
 </head>
 
 <body>
+    <!-- Link to Moment.js should go here -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <!--Jumbotron-->
     <div class="container">
         <div class="jumbotron" style="background-color: brown">
@@ -65,15 +67,17 @@
                                 <input type="text" class="form-control" id="destinationData">
                             </div>
                             <div class="form-group">
+                                <!--used time formated by html instead of military time for input
+                                database stores time in military time-->
                                 <label for="f-trainTime">First Train Time (HHmm-military time)</label>
-                                <input type="text" class="form-control" id="f-trainTimeData">
+                                <input type="time" class="form-control" id="f-trainTimeData">
                             </div>
                             <div class="form-group">
                                 <label for="frequency">Frequency (in minutes)</label>
-                                <input type="text" class="form-control" id="frequencyData">
+                                <input type="number" class="form-control" id="frequencyData">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" id="submit" class="btn tn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -81,7 +85,7 @@
         </div>
     </div>
     <!--Script-->
-    <script src="traintime-data.js"></script>
+    <script type = "text/javascript" src="traintime-data.js"></script>
 </body>
 
 </html>
